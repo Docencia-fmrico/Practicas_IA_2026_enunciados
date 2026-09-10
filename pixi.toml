@@ -1,0 +1,21 @@
+[workspace]
+authors = ["Francisco Martín Rico <fmrico@gmail.com>"]
+channels = ["conda-forge"]
+name = "Practicas_IA_2026_enunciados"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[dependencies]
+python = "3.12.*"
+pytest = "*"
+coverage = "*"
+flake8 = "*"
+
+[tasks]
+lint = "flake8 ."
+
+test-common = { cmd = "coverage run -m pytest -q && coverage report -m", cwd = "common" }
+test-sat-solver = { cmd = "coverage run -m pytest -q && coverage report -m", cwd = "practica2_logica" }
+test = { depends-on = ["test-common", "test-sat-solver"] }
+
+ci = { depends-on = ["lint", "test"] }

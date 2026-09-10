@@ -1,0 +1,18 @@
+[flake8]
+max-line-length = 200
+extend-ignore =
+    # W503: salto de línea antes de un operador binario -- el propio PEP8
+    # recomienda ahora el estilo contrario a la regla que aplicaba antes
+    # (ver la nota de W504 en la documentación de pycodestyle); mantener
+    # las dos activas a la vez es contradictorio, así que se desactiva
+    # esta como hacen la mayoría de proyectos.
+    W503
+exclude = __pycache__,.git,.pixi
+per-file-ignores =
+    # practicaN_enunciado.py es el punto de partida para el estudiante:
+    # importa de antemano lo que hará falta para completar los TODOs
+    # (F401, sin usar hasta que se implementen) y alguna variable de la
+    # demo solo se usa dentro de los bloques de main() todavía comentados,
+    # que se van descomentando a medida que se avanza (F841). Ambos avisos
+    # son intencionados en estos ficheros, no errores.
+    */practica*_enunciado.py:F401,F841

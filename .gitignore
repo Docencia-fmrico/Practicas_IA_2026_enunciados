@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+.vscode/
+
+# pixi environments
+.pixi/*
+!.pixi/config.toml
