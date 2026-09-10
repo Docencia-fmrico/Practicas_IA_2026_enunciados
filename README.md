@@ -1,5 +1,7 @@
 # Prácticas de Inteligencia Artificial — Curso 2026/2027
 
+[![CI](https://github.com/Docencia-fmrico/Practicas_IA_2026_enunciados/actions/workflows/ci.yml/badge.svg)](https://github.com/Docencia-fmrico/Practicas_IA_2026_enunciados/actions/workflows/ci.yml)
+
 Prácticas de la asignatura **Inteligencia Artificial**, 3º curso del
 **Grado en Ingeniería en Robótica Software** (URJC).
 
