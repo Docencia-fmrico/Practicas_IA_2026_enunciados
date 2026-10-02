@@ -339,6 +339,13 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--density", type=float, default=0.5)
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--no-color", action="store_true")
+    parser.add_argument(
+        "--show",
+        choices=["none", "q1", "q2", "q3", "q4", "q5", "q7", "all"],
+        default="q7",
+        help="qué plan(es) mostrar como ruta sobre el mapa al final (default: q7)",
+    )
+    parser.add_argument("--step", action="store_true", help="además de la ruta completa, anima --show casilla a casilla")
     return parser
 
 
